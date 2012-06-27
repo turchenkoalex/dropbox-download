@@ -1,0 +1,7 @@
+module AppConfig
+	APP_TOKEN  = ''
+	APP_SECRET = ''
+	APP_MODE = :dropbox
+	USER_TOKEN = ''
+	USER_SECRET = ''
+end
