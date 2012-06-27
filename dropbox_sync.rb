@@ -128,6 +128,7 @@ module DropboxSync
 		def initialize(options = {})
 			@filepath = options[:filepath]
 			@dropbox = options[:dropbox]
+			@cleanup_dropbox = options[:cleanup_dropbox]
 
 			@connector = DropboxConnector.new({
 				app_mode: AppConfig::APP_MODE,
@@ -143,7 +144,7 @@ module DropboxSync
 				client: @connector.client,
 				dropbox_root: @dropbox,
 				filepath_root: @filepath,
-				cleanup_dropbox: false,
+				cleanup_dropbox: @cleanup_dropbox,
 				cleanup_local: false,
 				path: '',
 				root: true
